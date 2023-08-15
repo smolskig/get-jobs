@@ -2,6 +2,10 @@
 
 This project is an DEMO website based on a Job listing platform
 
+
+You can see the website [here](https://get-jobs.vercel.app/).
+
+
 ## Techs used
 - React + Typescript
 - TailwindCSS
@@ -16,6 +20,7 @@ I've created a figma design just for this project
 This is a WIP project so it maybe lack some features right now
 Here are some features a want to implement on this website
 
+- [ ] Implement full responsive layout
 - [ ] Create a component for buttons
 - [ ] Add hover effect on buttons and list items
 - [ ] Create the complete job listing page

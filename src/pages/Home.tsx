@@ -28,10 +28,10 @@ const Home = () => {
   ];
 
   return (
-    <div className="flex flex-col w-full container mx-auto px-60">
+    <div className="flex flex-col w-full container mx-auto lg:px-32 xl:px-60">
       <Navbar />
-      <div className="h-40 mt-28 flex flex-col justify-between items-center">
-        <h1 className="text-5xl font-bold text-black text-center">
+      <div className="h-40 mt-20 flex flex-col justify-between items-center lg:mt-28">
+        <h1 className="text-4xl mb-10 font-bold text-black text-center lg:text-5xl">
           Discover new Job Opportunities
         </h1>
         <button className="py-3 px-12 rounded-md bg-primary text-white">
@@ -39,10 +39,10 @@ const Home = () => {
         </button>
       </div>
 
-      <h3 className="text-2xl mt-44 font-bold text-black text-center">
+      <h3 className=" text-2xl mt-44 font-bold text-black text-center">
         Last Jobs
       </h3>
-      <div className="flex justify-center mx-14">
+      <div className="flex justify-center lg:mx-14">
         <JobList jobs={jobData}></JobList>
       </div>
     </div>

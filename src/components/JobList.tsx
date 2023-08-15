@@ -18,20 +18,22 @@ const JobList = ({ jobs }: JobListProps) => {
         return (
           <div
             key={job.title}
-            className="flex gap-8 rounded-md pb-5 px-4 border-x-0 border-t-0 border border-solid border-secondary"
+            className="md:gap-8 flex gap-2 rounded-md pb-5 px-4 border-x-0 border-t-0 border border-solid border-secondary"
           >
             <img
               src={job.image}
               className="flex items-center justify-center w-14 h-14 rounded-full object-cover  "
             />
             <div className="flex flex-col flex-1">
-              <span>{job.company}</span>
-              <span className="font-semibold text-lg">{job.title}</span>
+              <span className="text-xs md:text-base">{job.company}</span>
+              <span className="font-semibold text-sm md:text-lg">
+                {job.title}
+              </span>
               <div className="flex flex-wrap gap-2 mt-1">
                 {job.tags.map((tag) => (
                   <div
                     key={tag}
-                    className="px-2 border border-solid text-sm border-secondary rounded-md text-gray-500"
+                    className="md:px-2 md:text-sm px-1 border border-solid text-xs border-secondary rounded-md text-gray-500"
                   >
                     {tag}
                   </div>
@@ -40,7 +42,7 @@ const JobList = ({ jobs }: JobListProps) => {
             </div>
             <div className="flex justify-center items-center gap-4">
               {job.info.isNew && (
-                <div className="px-4 py-1 text-sm border border-solid bg-primary rounded-md text-white">
+                <div className="hidden md:block px-4 py-1 text-sm border border-solid bg-primary rounded-md text-white">
                   New
                 </div>
               )}

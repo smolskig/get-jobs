@@ -20,13 +20,14 @@ const JobList = ({ jobs }: JobListProps) => {
             key={job.title}
             className="flex gap-8 rounded-md pb-5 px-4 border-x-0 border-t-0 border border-solid border-secondary"
           >
-            <div className="flex items-center justify-center w-20 h-auto bg-gray-300 text-gray-400">
-              {job.image}
-            </div>
+            <img
+              src={job.image}
+              className="flex items-center justify-center w-14 h-14 rounded-full object-cover  "
+            />
             <div className="flex flex-col flex-1">
               <span>{job.company}</span>
               <span className="font-semibold text-lg">{job.title}</span>
-              <div className="flex gap-2 mt-1">
+              <div className="flex flex-wrap gap-2 mt-1">
                 {job.tags.map((tag) => (
                   <div
                     key={tag}
@@ -43,7 +44,9 @@ const JobList = ({ jobs }: JobListProps) => {
                   New
                 </div>
               )}
-              <span className="py-1 text-sm text-gray-500">{job.info.timePosted}</span>
+              <span className="py-1 text-sm text-gray-500">
+                {job.info.timePosted}
+              </span>
             </div>
           </div>
         );

@@ -6,28 +6,29 @@ const Home = () => {
     {
       title: "Frontend Developer",
       company: "2U2",
-      image: "Image",
+      image:
+        "https://images.crunchbase.com/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/v1426518294/lhub3cdefsjd70ivt2rm.png",
       tags: ["Remote"],
       info: { isNew: true, timePosted: "3 hours ago" },
     },
     {
       title: "Fullstack Developer",
       company: "Attentiv",
-      image: "Image",
+      image: "https://images.prismic.io/brandfetch/562b048d-b273-42e1-bee1-fa0147809aa3_attentive+04.png?auto=compress,format",
       tags: ["Remote", "$3k - $5k", "US Based"],
       info: { isNew: true, timePosted: "4 hours ago" },
     },
     {
       title: "Backend Developer",
-      company: "Company",
-      image: "Image",
+      company: "Palantir",
+      image: "https://ctovision.com/wp-content/uploads/palantir.png",
       tags: ["Remote", "Latin America", "$8k - $10k"],
       info: { isNew: false, timePosted: "24 hours ago" },
     },
   ];
 
   return (
-    <div className="flex flex-col w-full container mx-auto">
+    <div className="flex flex-col w-full container mx-auto px-60">
       <Navbar />
       <div className="h-40 mt-28 flex flex-col justify-between items-center">
         <h1 className="text-5xl font-bold text-black text-center">
@@ -39,9 +40,9 @@ const Home = () => {
       </div>
 
       <h3 className="text-2xl mt-44 font-bold text-black text-center">
-        Recent Roles
+        Last Jobs
       </h3>
-      <div className="flex justify-center mx-60">
+      <div className="flex justify-center mx-14">
         <JobList jobs={jobData}></JobList>
       </div>
     </div>

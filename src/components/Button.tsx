@@ -6,7 +6,7 @@ interface ButtonProps extends ButtonHTMLAttributes<""> {
 
 const Button = (props: ButtonProps) => {
   return (
-    <button className={`py-3 px-12 rounded-md hover:brightness-90 transition-all ${props.className}`}>
+    <button className={`py-3 px-12 rounded-md hover:brightness-75 transition-all ${props.className}`}>
       {props.children}
     </button>
   );

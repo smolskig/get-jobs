@@ -1,5 +1,8 @@
+import { useNavigate } from "react-router";
+
 interface JobListProps {
   jobs: Array<{
+    id: number;
     image: string;
     title: string;
     company: string;
@@ -12,12 +15,19 @@ interface JobListProps {
 }
 
 const JobList = ({ jobs }: JobListProps) => {
+  const navigate = useNavigate();
+
+  const handleOpenJob = (id: number) => {
+    navigate(id.toString());
+  };
+
   return (
-    <div className="flex flex-col w-full mt-16 gap-12 mb-10 ">
+    <div className="flex flex-col w-full mt-16 gap-12 mb-10">
       {jobs?.map((job) => {
         return (
           <div
             key={job.title}
+            onClick={() => handleOpenJob(job.id)}
             className="md:gap-8 flex gap-2 rounded-md pb-8 px-4 border-x-0 border-t-0 border border-solid border-secondary cursor-pointer"
           >
             <img

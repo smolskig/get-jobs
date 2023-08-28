@@ -1,6 +1,5 @@
 import Button from "../components/Button";
 import JobList from "../components/JobList";
-import Navbar from "../components/Navbar";
 
 const Home = () => {
   const jobData = [

@@ -1,5 +1,5 @@
 import Button from "../components/Button";
-import JobList from "../components/JobList";
+import JobList from "../components/Jobs/JobList";
 
 const Home = () => {
   return (
